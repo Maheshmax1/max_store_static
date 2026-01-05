@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - MAX Men's Wear</title>
+    <link rel="stylesheet" href="../styles/admin.css">
+    
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html" class="logo">MAX</a>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="admin.html">Dashboard</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="admin-page">
+        <a href="../index.html" class="back-btn">← Back to Home</a>
+        <h2 class="page-title">Admin Dashboard</h2>
+
+        <!-- Statistics Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h4>247</h4>
+                <p>Total Products</p>
+            </div>
+            <div class="stat-card">
+                <h4>1,845</h4>
+                <p>Total Orders</p>
+            </div>
+            <div class="stat-card">
+                <h4>3,421</h4>
+                <p>Registered Users</p>
+            </div>
+            <div class="stat-card">
+                <h4>$85,340</h4>
+                <p>Total Revenue</p>
+            </div>
+        </div>
+
+        <!-- Add Product Section -->
+        <div class="admin-section">
+            <h3>Add New Product</h3>
+            <form action="admin.html" method="get">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="category">Category *</label>
+                        <select id="category" name="category" required>
+                            <option value="">Select Category</option>
+                            <option value="shirts">Shirts</option>
+                            <option value="pants">Pants</option>
+                            <option value="trousers">Trousers</option>
+                            <option value="tshirts">T-Shirts</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-name">Product Name *</label>
+                        <input type="text" id="product-name" name="product-name" placeholder="Enter product name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Price ($) *</label>
+                        <input type="number" id="price" name="price" step="0.01" placeholder="0.00" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stock">Stock Quantity *</label>
+                        <input type="number" id="stock" name="stock" placeholder="0" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Product Description *</label>
+                    <textarea id="description" name="description" rows="3" placeholder="Enter product description"
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Add Product</button>
+            </form>
+        </div>
+
+        <!-- Products Management -->
+        <div class="admin-section">
+            <h3>Manage Products</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001</td>
+                            <td>Classic Blue Shirt</td>
+                            <td>Shirts</td>
+                            <td>$49.99</td>
+                            <td>45</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#002</td>
+                            <td>Navy Blue Pants</td>
+                            <td>Pants</td>
+                            <td>$64.99</td>
+                            <td>32</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#003</td>
+                            <td>Black Formal Trousers</td>
+                            <td>Trousers</td>
+                            <td>$74.99</td>
+                            <td>28</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#004</td>
+                            <td>Black Graphic Tee</td>
+                            <td>T-Shirts</td>
+                            <td>$29.99</td>
+                            <td>67</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#005</td>
+                            <td>White Formal Shirt</td>
+                            <td>Shirts</td>
+                            <td>$45.99</td>
+                            <td>52</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Users Management -->
+        <div class="admin-section">
+            <h3>Registered Users</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Registration Date</th>
+                            <th>Total Orders</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#U001</td>
+                            <td>Rajesh Kumar</td>
+                            <td>rajesh@example.com</td>
+                            <td>2024-12-15</td>
+                            <td>12</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn">View</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#U002</td>
+                            <td>Amit Sharma</td>
+                            <td>amit@example.com</td>
+                            <td>2024-12-10</td>
+                            <td>8</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn">View</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#U003</td>
+                            <td>Priya Singh</td>
+                            <td>priya@example.com</td>
+                            <td>2024-12-08</td>
+                            <td>15</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn">View</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#U004</td>
+                            <td>Vikram Patel</td>
+                            <td>vikram@example.com</td>
+                            <td>2024-12-05</td>
+                            <td>5</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn">View</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#U005</td>
+                            <td>Ananya Reddy</td>
+                            <td>ananya@example.com</td>
+                            <td>2024-12-01</td>
+                            <td>10</td>
+                            <td class="action-buttons">
+                                <button class="edit-btn">View</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Recent Orders -->
+        <div class="admin-section">
+            <h3>Recent Orders</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Product</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#ORD1001</td>
+                            <td>Rajesh Kumar</td>
+                            <td>Classic Blue Shirt</td>
+                            <td>$49.99</td>
+                            <td>2024-12-28</td>
+                            <td><span style="color: #4CAF50; font-weight: bold;">Delivered</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD1002</td>
+                            <td>Amit Sharma</td>
+                            <td>Navy Blue Pants</td>
+                            <td>$64.99</td>
+                            <td>2024-12-27</td>
+                            <td><span style="color: #ff9800; font-weight: bold;">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD1003</td>
+                            <td>Priya Singh</td>
+                            <td>Black Graphic Tee</td>
+                            <td>$29.99</td>
+                            <td>2024-12-26</td>
+                            <td><span style="color: #2196F3; font-weight: bold;">Shipped</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MAX Men's Wear. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

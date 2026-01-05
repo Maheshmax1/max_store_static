@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - MAX Men's Wear</title>
+    <link rel="stylesheet" href="/styles/detail.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">MAX</div>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/shirts.html">Shirts</a></li>
+            <li><a href="/pages/pants.html">Pants</a></li>
+            <li><a href="/pages/trouser.html">Trousers</a></li>
+            <li><a href="/pages/t-shirt.html">T-Shirts</a></li>
+            <li><a href="/pages/contact.html">Contact</a></li>
+            <li><a href="/pages/cart.html" class="cart-icon">🛒 <span class="cart-count">3</span></a></li>
+            <li><a href="/pages/login.html" class="user-icon">👤</a></li>
+        </ul>
+    </nav>
+
+    <main class="checkout-container">
+        <section class="checkout-form">
+            
+            <a href="./pages/cart.html" class="btn-back">
+                <span class="arrow">←</span> Back to Cart
+            </a>
+
+            <h2>Complete Your Purchase</h2>
+            
+            <div class="card">
+                <h3>Shipping Information</h3>
+                <div class="input-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Shipping Address" required>
+                </div>
+                <div class="input-row">
+                    <input type="text" placeholder="City" required>
+                    <input type="text" placeholder="Zip Code" required>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Payment Method</h3>
+                <div class="payment-options">
+                    <label class="radio-label">
+                        <input type="radio" name="payment" value="card" checked onclick="togglePayment(true)"> 
+                        <span>Credit/Debit Card</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="payment" value="cod" onclick="togglePayment(false)"> 
+                        <span>Cash on Delivery</span>
+                    </label>
+                </div>
+
+                <div id="card-details">
+                    <div class="input-group">
+                        <input type="text" placeholder="Card Number (0000 0000 0000 0000)">
+                    </div>
+                    <div class="input-row">
+                        <input type="text" placeholder="MM/YY">
+                        <input type="text" placeholder="CVV">
+                    </div>
+                </div>
+                
+                <div id="cod-message" style="display: none; margin-top: 15px; padding: 10px; background: #eef2f7; border-radius: 8px;">
+                    <p style="color: #1e3c72; font-size: 0.9rem;">📦 <strong>Note:</strong> You will pay in cash when the rider arrives at your doorstep.</p>
+                </div>
+            </div>
+        </section>
+
+        <aside class="order-summary-sidebar">
+            <div class="card">
+                <h3>Order Summary</h3>
+                <div class="summary-line"><span>Subtotal</span> <span>$209.96</span></div>
+                <div class="summary-line"><span>Shipping</span> <span>$10.00</span></div>
+                <div class="summary-line"><span>Tax</span> <span>$17.60</span></div>
+                <hr>
+                <div class="summary-line total">
+                    <span>Total</span> <span>$237.56</span>
+                </div>
+                <button class="pay-btn" onclick="alert('Order Placed Successfully!')">Place Order</button>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MAX Men's Wear. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function togglePayment(isCard) {
+            document.getElementById('card-details').style.display = isCard ? 'block' : 'none';
+            document.getElementById('cod-message').style.display = isCard ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MAX Men's Wear</title>
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html" class="logo">MAX</a>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="shirts.html">Shirts</a></li>
+            <li><a href="pants.html">Pants</a></li>
+            <li><a href="trouser.html">Trousers</a></li>
+            <li><a href="t-shirt.html">T-Shirts</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html" class="cart-icon">🛒 <span class="cart-count">3</span></a></li>
+            <li><a href="login.html" class="user-icon">👤</a></li>
+        </ul>
+    </nav>
+
+    <div class="login-page">
+        <a href="../index.html" class="back-btn">← Back to Home</a>
+
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Welcome Back!</h2>
+                <p>Login to your account</p>
+            </div>
+
+            <form action="../index.html" method="get">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox" name="remember">
+                        Remember me
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <div class="social-login">
+                <button class="social-btn">📘 Facebook</button>
+                <button class="social-btn">🔍 Google</button>
+            </div>
+
+            <div class="form-footer">
+                Don't have an account? <a href="#">Sign Up</a>
+            </div>
+
+            <div class="form-footer" style="margin-top: 1rem;">
+                Admin Login? <a href="admin.html">Click here</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MAX Men's Wear. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
